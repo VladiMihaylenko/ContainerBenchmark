@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B7CF8AF91A7020A50017593E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CF8AF81A7020A50017593E /* main.m */; };
+		B7CF8B011A703BAD0017593E /* MyMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CF8B001A703BAD0017593E /* MyMutableArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		B7CF8AF51A7020A50017593E /* Benchmarking */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Benchmarking; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CF8AF81A7020A50017593E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B7CF8AFF1A703BAD0017593E /* MyMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMutableArray.h; sourceTree = "<group>"; };
+		B7CF8B001A703BAD0017593E /* MyMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMutableArray.m; sourceTree = "<group>"; };
+		B7CF8B0D1A7057920017593E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 		B7CF8AEC1A7020A50017593E = {
 			isa = PBXGroup;
 			children = (
+				B7CF8B0D1A7057920017593E /* QuartzCore.framework */,
 				B7CF8AF71A7020A50017593E /* Benchmarking */,
 				B7CF8AF61A7020A50017593E /* Products */,
 			);
@@ -57,6 +62,8 @@
 		B7CF8AF71A7020A50017593E /* Benchmarking */ = {
 			isa = PBXGroup;
 			children = (
+				B7CF8AFF1A703BAD0017593E /* MyMutableArray.h */,
+				B7CF8B001A703BAD0017593E /* MyMutableArray.m */,
 				B7CF8AF81A7020A50017593E /* main.m */,
 			);
 			path = Benchmarking;
@@ -118,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CF8B011A703BAD0017593E /* MyMutableArray.m in Sources */,
 				B7CF8AF91A7020A50017593E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
