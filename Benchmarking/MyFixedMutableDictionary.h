@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface MyFixedMutableDictionary : NSMutableDictionary
-
+- (instancetype)initWithSize:(NSUInteger)size;
 @end

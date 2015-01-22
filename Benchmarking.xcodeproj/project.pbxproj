@@ -40,7 +40,6 @@
 		B7CF8AF81A7020A50017593E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7CF8AFF1A703BAD0017593E /* MyMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMutableArray.h; sourceTree = "<group>"; };
 		B7CF8B001A703BAD0017593E /* MyMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMutableArray.m; sourceTree = "<group>"; };
-		B7CF8B0D1A7057920017593E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +56,6 @@
 		B7CF8AEC1A7020A50017593E = {
 			isa = PBXGroup;
 			children = (
-				B7CF8B0D1A7057920017593E /* QuartzCore.framework */,
 				B7CF8AF71A7020A50017593E /* Benchmarking */,
 				B7CF8AF61A7020A50017593E /* Products */,
 			);
