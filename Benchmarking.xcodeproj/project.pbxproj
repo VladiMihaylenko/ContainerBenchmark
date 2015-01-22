@@ -11,6 +11,15 @@
 		A857DF921A71525D00CBF247 /* _MyMutableDictionaryBucket.m in Sources */ = {isa = PBXBuildFile; fileRef = A857DF911A71525D00CBF247 /* _MyMutableDictionaryBucket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A857DF951A71530800CBF247 /* _MyBlockEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A857DF941A71530800CBF247 /* _MyBlockEnumerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A857DF981A7153EE00CBF247 /* MyFixedMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A857DF971A7153EE00CBF247 /* MyFixedMutableDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B74011021A7186F0003D8847 /* NSMutableArray+Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = B74011011A7186F0003D8847 /* NSMutableArray+Benchmark.m */; };
+		B740110A1A719826003D8847 /* MyMutableArray+Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = B74011091A719826003D8847 /* MyMutableArray+Benchmark.m */; };
+		B740110D1A71999F003D8847 /* MyMutableDictionary+Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = B740110C1A71999F003D8847 /* MyMutableDictionary+Benchmark.m */; };
+		B74011121A719F74003D8847 /* NSMutableDictionary+Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = B74011111A719F74003D8847 /* NSMutableDictionary+Benchmark.m */; };
+		B74011161A71A18C003D8847 /* Benchmarker.m in Sources */ = {isa = PBXBuildFile; fileRef = B74011151A71A18C003D8847 /* Benchmarker.m */; };
+		B740111D1A71A437003D8847 /* ArrayBenchmarker.m in Sources */ = {isa = PBXBuildFile; fileRef = B740111C1A71A437003D8847 /* ArrayBenchmarker.m */; };
+		B74011201A71A495003D8847 /* CustomArrayBenchmarker.m in Sources */ = {isa = PBXBuildFile; fileRef = B740111F1A71A495003D8847 /* CustomArrayBenchmarker.m */; };
+		B74011231A71A4E2003D8847 /* DictionaryBenchmarker.m in Sources */ = {isa = PBXBuildFile; fileRef = B74011221A71A4E2003D8847 /* DictionaryBenchmarker.m */; };
+		B74011261A71A57C003D8847 /* CustomDictionaryBenchmarker.m in Sources */ = {isa = PBXBuildFile; fileRef = B74011251A71A57C003D8847 /* CustomDictionaryBenchmarker.m */; };
 		B7CF8AF91A7020A50017593E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CF8AF81A7020A50017593E /* main.m */; };
 		B7CF8B011A703BAD0017593E /* MyMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CF8B001A703BAD0017593E /* MyMutableArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
@@ -36,6 +45,24 @@
 		A857DF941A71530800CBF247 /* _MyBlockEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MyBlockEnumerator.m; sourceTree = "<group>"; };
 		A857DF961A7153EE00CBF247 /* MyFixedMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFixedMutableDictionary.h; sourceTree = "<group>"; };
 		A857DF971A7153EE00CBF247 /* MyFixedMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFixedMutableDictionary.m; sourceTree = "<group>"; };
+		B74011001A7186F0003D8847 /* NSMutableArray+Benchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Benchmark.h"; sourceTree = "<group>"; };
+		B74011011A7186F0003D8847 /* NSMutableArray+Benchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Benchmark.m"; sourceTree = "<group>"; };
+		B74011081A719826003D8847 /* MyMutableArray+Benchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyMutableArray+Benchmark.h"; sourceTree = "<group>"; };
+		B74011091A719826003D8847 /* MyMutableArray+Benchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyMutableArray+Benchmark.m"; sourceTree = "<group>"; };
+		B740110B1A71999F003D8847 /* MyMutableDictionary+Benchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyMutableDictionary+Benchmark.h"; sourceTree = "<group>"; };
+		B740110C1A71999F003D8847 /* MyMutableDictionary+Benchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyMutableDictionary+Benchmark.m"; sourceTree = "<group>"; };
+		B74011101A719F74003D8847 /* NSMutableDictionary+Benchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Benchmark.h"; sourceTree = "<group>"; };
+		B74011111A719F74003D8847 /* NSMutableDictionary+Benchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Benchmark.m"; sourceTree = "<group>"; };
+		B74011141A71A18C003D8847 /* Benchmarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Benchmarker.h; sourceTree = "<group>"; };
+		B74011151A71A18C003D8847 /* Benchmarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Benchmarker.m; sourceTree = "<group>"; };
+		B740111B1A71A437003D8847 /* ArrayBenchmarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayBenchmarker.h; sourceTree = "<group>"; };
+		B740111C1A71A437003D8847 /* ArrayBenchmarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayBenchmarker.m; sourceTree = "<group>"; };
+		B740111E1A71A495003D8847 /* CustomArrayBenchmarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomArrayBenchmarker.h; sourceTree = "<group>"; };
+		B740111F1A71A495003D8847 /* CustomArrayBenchmarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomArrayBenchmarker.m; sourceTree = "<group>"; };
+		B74011211A71A4E2003D8847 /* DictionaryBenchmarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryBenchmarker.h; sourceTree = "<group>"; };
+		B74011221A71A4E2003D8847 /* DictionaryBenchmarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryBenchmarker.m; sourceTree = "<group>"; };
+		B74011241A71A57C003D8847 /* CustomDictionaryBenchmarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDictionaryBenchmarker.h; sourceTree = "<group>"; };
+		B74011251A71A57C003D8847 /* CustomDictionaryBenchmarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDictionaryBenchmarker.m; sourceTree = "<group>"; };
 		B7CF8AF51A7020A50017593E /* Benchmarking */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Benchmarking; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CF8AF81A7020A50017593E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7CF8AFF1A703BAD0017593E /* MyMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMutableArray.h; sourceTree = "<group>"; };
@@ -53,6 +80,127 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B74010FE1A7186BE003D8847 /* MutableDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				B740110F1A719F45003D8847 /* NS */,
+				B740110E1A719F3E003D8847 /* My */,
+			);
+			name = MutableDictionary;
+			sourceTree = "<group>";
+		};
+		B74010FF1A7186C9003D8847 /* MutableArray */ = {
+			isa = PBXGroup;
+			children = (
+				B74011071A71980E003D8847 /* My */,
+				B74011061A719803003D8847 /* NS */,
+			);
+			name = MutableArray;
+			sourceTree = "<group>";
+		};
+		B74011061A719803003D8847 /* NS */ = {
+			isa = PBXGroup;
+			children = (
+				B74011181A71A265003D8847 /* Benchmark */,
+			);
+			name = NS;
+			sourceTree = "<group>";
+		};
+		B74011071A71980E003D8847 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				B7CF8AFF1A703BAD0017593E /* MyMutableArray.h */,
+				B7CF8B001A703BAD0017593E /* MyMutableArray.m */,
+				B74011171A71A249003D8847 /* Benchmark */,
+			);
+			name = My;
+			sourceTree = "<group>";
+		};
+		B740110E1A719F3E003D8847 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				A857DF8D1A714FBC00CBF247 /* MyMutableDictionary.h */,
+				A857DF8E1A714FBC00CBF247 /* MyMutableDictionary.m */,
+				A857DF901A71525D00CBF247 /* _MyMutableDictionaryBucket.h */,
+				A857DF911A71525D00CBF247 /* _MyMutableDictionaryBucket.m */,
+				A857DF931A71530800CBF247 /* _MyBlockEnumerator.h */,
+				A857DF941A71530800CBF247 /* _MyBlockEnumerator.m */,
+				A857DF961A7153EE00CBF247 /* MyFixedMutableDictionary.h */,
+				A857DF971A7153EE00CBF247 /* MyFixedMutableDictionary.m */,
+				B740111A1A71A27F003D8847 /* Benchmark */,
+			);
+			name = My;
+			sourceTree = "<group>";
+		};
+		B740110F1A719F45003D8847 /* NS */ = {
+			isa = PBXGroup;
+			children = (
+				B74011191A71A271003D8847 /* Benchmark */,
+			);
+			name = NS;
+			sourceTree = "<group>";
+		};
+		B74011131A71A172003D8847 /* Benchmarker */ = {
+			isa = PBXGroup;
+			children = (
+				B74011271A71AA2A003D8847 /* Worker */,
+			);
+			name = Benchmarker;
+			sourceTree = "<group>";
+		};
+		B74011171A71A249003D8847 /* Benchmark */ = {
+			isa = PBXGroup;
+			children = (
+				B74011081A719826003D8847 /* MyMutableArray+Benchmark.h */,
+				B74011091A719826003D8847 /* MyMutableArray+Benchmark.m */,
+			);
+			name = Benchmark;
+			sourceTree = "<group>";
+		};
+		B74011181A71A265003D8847 /* Benchmark */ = {
+			isa = PBXGroup;
+			children = (
+				B74011001A7186F0003D8847 /* NSMutableArray+Benchmark.h */,
+				B74011011A7186F0003D8847 /* NSMutableArray+Benchmark.m */,
+			);
+			name = Benchmark;
+			sourceTree = "<group>";
+		};
+		B74011191A71A271003D8847 /* Benchmark */ = {
+			isa = PBXGroup;
+			children = (
+				B74011101A719F74003D8847 /* NSMutableDictionary+Benchmark.h */,
+				B74011111A719F74003D8847 /* NSMutableDictionary+Benchmark.m */,
+			);
+			name = Benchmark;
+			sourceTree = "<group>";
+		};
+		B740111A1A71A27F003D8847 /* Benchmark */ = {
+			isa = PBXGroup;
+			children = (
+				B740110B1A71999F003D8847 /* MyMutableDictionary+Benchmark.h */,
+				B740110C1A71999F003D8847 /* MyMutableDictionary+Benchmark.m */,
+			);
+			name = Benchmark;
+			sourceTree = "<group>";
+		};
+		B74011271A71AA2A003D8847 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				B74011141A71A18C003D8847 /* Benchmarker.h */,
+				B74011151A71A18C003D8847 /* Benchmarker.m */,
+				B740111B1A71A437003D8847 /* ArrayBenchmarker.h */,
+				B740111C1A71A437003D8847 /* ArrayBenchmarker.m */,
+				B740111E1A71A495003D8847 /* CustomArrayBenchmarker.h */,
+				B740111F1A71A495003D8847 /* CustomArrayBenchmarker.m */,
+				B74011211A71A4E2003D8847 /* DictionaryBenchmarker.h */,
+				B74011221A71A4E2003D8847 /* DictionaryBenchmarker.m */,
+				B74011241A71A57C003D8847 /* CustomDictionaryBenchmarker.h */,
+				B74011251A71A57C003D8847 /* CustomDictionaryBenchmarker.m */,
+			);
+			name = Worker;
+			sourceTree = "<group>";
+		};
 		B7CF8AEC1A7020A50017593E = {
 			isa = PBXGroup;
 			children = (
@@ -72,17 +220,10 @@
 		B7CF8AF71A7020A50017593E /* Benchmarking */ = {
 			isa = PBXGroup;
 			children = (
-				B7CF8AFF1A703BAD0017593E /* MyMutableArray.h */,
-				B7CF8B001A703BAD0017593E /* MyMutableArray.m */,
 				B7CF8AF81A7020A50017593E /* main.m */,
-				A857DF8D1A714FBC00CBF247 /* MyMutableDictionary.h */,
-				A857DF8E1A714FBC00CBF247 /* MyMutableDictionary.m */,
-				A857DF901A71525D00CBF247 /* _MyMutableDictionaryBucket.h */,
-				A857DF911A71525D00CBF247 /* _MyMutableDictionaryBucket.m */,
-				A857DF931A71530800CBF247 /* _MyBlockEnumerator.h */,
-				A857DF941A71530800CBF247 /* _MyBlockEnumerator.m */,
-				A857DF961A7153EE00CBF247 /* MyFixedMutableDictionary.h */,
-				A857DF971A7153EE00CBF247 /* MyFixedMutableDictionary.m */,
+				B74010FF1A7186C9003D8847 /* MutableArray */,
+				B74010FE1A7186BE003D8847 /* MutableDictionary */,
+				B74011131A71A172003D8847 /* Benchmarker */,
 			);
 			path = Benchmarking;
 			sourceTree = "<group>";
@@ -144,11 +285,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CF8B011A703BAD0017593E /* MyMutableArray.m in Sources */,
+				B74011201A71A495003D8847 /* CustomArrayBenchmarker.m in Sources */,
 				B7CF8AF91A7020A50017593E /* main.m in Sources */,
+				B740111D1A71A437003D8847 /* ArrayBenchmarker.m in Sources */,
+				B740110A1A719826003D8847 /* MyMutableArray+Benchmark.m in Sources */,
+				B74011161A71A18C003D8847 /* Benchmarker.m in Sources */,
+				B74011261A71A57C003D8847 /* CustomDictionaryBenchmarker.m in Sources */,
 				A857DF951A71530800CBF247 /* _MyBlockEnumerator.m in Sources */,
 				A857DF921A71525D00CBF247 /* _MyMutableDictionaryBucket.m in Sources */,
+				B74011021A7186F0003D8847 /* NSMutableArray+Benchmark.m in Sources */,
 				A857DF8F1A714FBC00CBF247 /* MyMutableDictionary.m in Sources */,
+				B74011121A719F74003D8847 /* NSMutableDictionary+Benchmark.m in Sources */,
 				A857DF981A7153EE00CBF247 /* MyFixedMutableDictionary.m in Sources */,
+				B74011231A71A4E2003D8847 /* DictionaryBenchmarker.m in Sources */,
+				B740110D1A71999F003D8847 /* MyMutableDictionary+Benchmark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +382,8 @@
 		B7CF8AFD1A7020A50017593E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -239,6 +391,8 @@
 		B7CF8AFE1A7020A50017593E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
