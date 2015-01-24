@@ -27,8 +27,8 @@
 }
 
 - (id)objectAtIndex:(NSUInteger)index { // here
-    NSAssert(index >= 0, @"Index must be positive or 0");
-    NSAssert(index <= _count - 1, @"Index out of bounds");
+//    NSAssert(index >= 0, @"Index must be positive or 0");
+//    NSAssert(index <= _count - 1, @"Index out of bounds");
     return _objs[index];
 }
 

@@ -11,7 +11,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        [Benchmarker runBenchmarkWithType:BenchmarkerTypeNSMutableArray];
+        [Benchmarker runBenchmarkWithType:BenchmarkerTypeCustomMutableDictionary];
     }
     return 0;
 }

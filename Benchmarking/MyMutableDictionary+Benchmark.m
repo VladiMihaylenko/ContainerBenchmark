@@ -16,34 +16,37 @@ FOUNDATION_EXTERN const size_t iterations;
 
 + (void)testDeletingWithDictionaryCapacity:(const int)capacity completion:(BenchmarkCompletionHandler)completion {
     MyMutableDictionary *dictionary = _myMutableDictionaryWithCapacity(capacity);
+    NSArray *keys = dictionary.allKeys;
+    id key = keys[rand()%keys.count];
     uint64_t t_0 = dispatch_benchmark(iterations, ^{
-        @autoreleasepool {
-            id key = dictionary.allKeys[rand()%dictionary.allKeys.count];
-            [dictionary removeObjectForKey:key];
-        }
+        [dictionary removeObjectForKey:key];
     });
     completion(t_0);
 }
 
 + (void)testInsertWithDictionaryCapacity:(const int)capacity completion:(BenchmarkCompletionHandler)completion {
     MyMutableDictionary *dictionary = _myMutableDictionaryWithCapacity(capacity);
+    NSMutableArray *keys = [NSMutableArray array];
+    for (size_t i = 0; i != capacity; ++i) {
+        keys[i] = [NSString stringWithFormat:@"%@", @(rand())];
+    }
+    const id obj = @1;
+    id key = keys[rand()%keys.count];
     uint64_t t_0 = dispatch_benchmark(iterations, ^{
-        @autoreleasepool {
-            id key = [NSString stringWithFormat:@"%@", @(rand())];
-            id obj = @1;
-            [dictionary setObject:obj forKey:key];
-        }
+        [dictionary setObject:obj forKey:key];
     });
     completion(t_0);
 }
 
 + (void)testSearchWithDictionaryCapacity:(const int)capacity completion:(BenchmarkCompletionHandler)completion {
     MyMutableDictionary *dictionary = _myMutableDictionaryWithCapacity(capacity);
+    NSMutableArray *keys = [NSMutableArray array];
+    for (size_t i = 0; i != capacity; ++i) {
+        keys[i] = [NSString stringWithFormat:@"%@", @(rand()%capacity)];
+    }
+    id key = keys[rand()%capacity];
     uint64_t t_0 = dispatch_benchmark(iterations, ^{
-        @autoreleasepool {
-            id key = [NSString stringWithFormat:@"%@", @(rand()%capacity)];
-            [dictionary objectForKey:key];
-        }
+        [dictionary objectForKey:key];
     });
     completion(t_0);
 }

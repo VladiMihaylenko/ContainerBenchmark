@@ -10,4 +10,5 @@
 
 @interface ArrayBenchmarker : NSObject
 + (void)benchmarkNSMutableArray;
++ (void)benchmarkCustomMutableArray;
 @end

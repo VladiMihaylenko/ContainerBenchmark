@@ -10,4 +10,5 @@
 
 @interface DictionaryBenchmarker : NSObject
 + (void)benchmarkNSMutableDictionary;
++ (void)benchmarkCustomMutableDictionary;
 @end

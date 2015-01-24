@@ -27,7 +27,7 @@
 
 - (void)dealloc {
     for (NSUInteger i = 0; i < _size; i++)
-    [_array[i] release];
+        [_array[i] release];
     free(_array);
     [super dealloc];
 }
@@ -40,10 +40,10 @@
     NSUInteger bucketIndex = [aKey hash] % _size;
     _MyMutableDictionaryBucket *bucket = _array[bucketIndex];
     while (bucket) {
-    if ([bucket.key isEqual:aKey]) {
-      return bucket.obj;
-    }
-    bucket = [bucket next];
+        if ([bucket.key isEqual:aKey]) {
+          return bucket.obj;
+        }
+        bucket = [bucket next];
     }
     return nil;
 }
@@ -53,7 +53,7 @@
     __block _MyMutableDictionaryBucket *bucket = nil;
     NSEnumerator *e = [[_MyBlockEnumerator alloc] initWithBlock:^id{
         bucket = [bucket next];
-        while (bucket) {
+        while (!bucket) {
             index++;
             if (index >= _size) {
                 return nil;
@@ -99,5 +99,20 @@
     _count++;
     
 }
+
+
+//- (NSArray *)allKeys {
+//    NSMutableArray *keys = [NSMutableArray array];
+//    for (size_t i = 0; i != _count; ++i) {
+//        _MyMutableDictionaryBucket *bucket = _array[i];
+//        while (bucket) {
+//            [keys addObject:bucket.key];
+//            bucket = [bucket next];
+//        }
+//    }
+//    return [keys.copy autorelease];
+//}
+
+
 
 @end

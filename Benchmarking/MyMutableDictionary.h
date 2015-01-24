@@ -9,9 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface MyMutableDictionary : NSMutableDictionary
-- (NSUInteger)count;
-- (id)objectForKey:(id)aKey;
-- (NSEnumerator *)keyEnumerator;
-- (void)removeObjectForKey:(id)aKey;
-- (void)setObject:(id)anObject forKey:(id)aKey;
+
 @end

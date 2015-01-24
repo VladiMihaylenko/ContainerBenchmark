@@ -16,9 +16,7 @@ FOUNDATION_EXTERN const size_t iterations;
 + (void)testDeletingLastElmentWithArrayCapacity:(const int)capacity completion:(BenchmarkCompletionHandler)completion {
     NSMutableArray *array = _mutableArrayWithCapacity(10*capacity);
     uint64_t t_0 = dispatch_benchmark(iterations/10, ^{
-        @autoreleasepool {
-            [array removeLastObject];
-        }
+        [array removeLastObject];
     });
     completion(t_0);
 }
@@ -26,10 +24,8 @@ FOUNDATION_EXTERN const size_t iterations;
 + (void)testDeletingWithArrayCapacity:(const int)capacity completion:(BenchmarkCompletionHandler)completion {
     NSMutableArray *array = _mutableArrayWithCapacity(10*capacity);
     uint64_t t_0 = dispatch_benchmark(iterations/10, ^{
-        @autoreleasepool {
-            NSUInteger index = rand()%capacity;
-            [array removeObjectAtIndex:index];
-        }
+        NSUInteger index = rand()%capacity;
+        [array removeObjectAtIndex:index];
     });
     completion(t_0);
 }
@@ -38,9 +34,7 @@ FOUNDATION_EXTERN const size_t iterations;
     NSMutableArray *array = _mutableArrayWithCapacity(capacity);
     NSNumber *num = @(rand());
     uint64_t t_0 = dispatch_benchmark(iterations, ^{
-        @autoreleasepool {
-            [array addObject:num];
-        }
+        [array addObject:num];
     });
     completion(t_0);
 }
@@ -49,20 +43,16 @@ FOUNDATION_EXTERN const size_t iterations;
     NSMutableArray *array = _mutableArrayWithCapacity(capacity);
     NSNumber *num = @(rand());
     uint64_t t_0 = dispatch_benchmark(iterations, ^{
-        @autoreleasepool {
-            [array insertObject:num atIndex:0];
-        }
+        [array insertObject:num atIndex:0];
     });
     completion(t_0);
 }
 
 + (void)testObjectAtIndexWithArrayCapacity:(const int)capacity completion:(BenchmarkCompletionHandler)completion {
     NSMutableArray *array = _mutableArrayWithCapacity(capacity);
+    NSUInteger index = array.count - 1;
     uint64_t t_0 = dispatch_benchmark(iterations, ^{
-        @autoreleasepool {
-            NSUInteger index = rand()%capacity;
-            [array objectAtIndex:index];
-        }
+        [array objectAtIndex:index];
     });
     completion(t_0);
     
@@ -70,11 +60,9 @@ FOUNDATION_EXTERN const size_t iterations;
 
 + (void)testIndexOfObjectWithArrayCapacity:(const int)capacity completion:(BenchmarkCompletionHandler)completion {
     NSMutableArray *array = _mutableArrayWithCapacity(capacity);
+    NSNumber *num = array[array.count-1];
     uint64_t t_0 = dispatch_benchmark(iterations, ^{
-        @autoreleasepool {
-            NSNumber *num = @(rand()%capacity);
-            [array indexOfObject:num];
-        }
+        [array indexOfObject:num];
     });
     completion(t_0);
 }

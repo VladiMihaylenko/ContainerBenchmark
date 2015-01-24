@@ -8,10 +8,13 @@
 
 #import "ArrayBenchmarker.h"
 #import "NSMutableArray+Benchmark.h"
+#import "MyMutableArray+Benchmark.h"
+#import "MyMutableArray.h"
 
 @implementation ArrayBenchmarker
 
-+ (void)benchmarkNSMutableArray {
++ (void)runBenchmarkingForClass:(Class)class {
+    NSLog(@"Benchmarking for class: %@", class);
     @autoreleasepool {
        const NSArray *capacity = @[@1000, @10000, @100000, @300000, @800000, @1000000];
         NSMutableArray *insertAtBeginTimes = [NSMutableArray array];
@@ -23,39 +26,52 @@
        
         for (NSNumber *num in capacity) {
             NSLog(@"CAPACITY : %@", num);
-            [NSMutableArray testInsertionAtBeginWithArrayCapacity:num.intValue completion:^(uint64 time) {
-                NSLog(@"NSMutableArray. Insert at beginning, time: %@", @(time) );
+            [class testInsertionAtBeginWithArrayCapacity:num.intValue completion:^(uint64 time) {
+                NSLog(@"%@. Insert at beginning, time: %@", class, @(time));
                 [insertAtBeginTimes addObject:@(time)];
             }];
             
-            [NSMutableArray testInsertionAtEndWithArrayCapacity:num.intValue completion:^(uint64 time) {
-                NSLog(@"NSMutableArray. Inset at end, time: %@", @(time) );
+            [class testInsertionAtEndWithArrayCapacity:num.intValue completion:^(uint64 time) {
+                NSLog(@"%@. Insert at end, time: %@", class, @(time));
                 [insertAtEndTimes addObject:@(time)];
             }];
             
-            [NSMutableArray testIndexOfObjectWithArrayCapacity:num.intValue completion:^(uint64 time) {
-                NSLog(@"NSMutableArray. Search by value, time: %@", @(time) );
+            [class testIndexOfObjectWithArrayCapacity:num.intValue completion:^(uint64 time) {
+                NSLog(@"%@. Search by value, time: %@", class, @(time));
                 [indexOfObjectTimes addObject:@(time)];
             }];
             
-            [NSMutableArray testObjectAtIndexWithArrayCapacity:num.intValue completion:^(uint64 time) {
-                NSLog(@"NSMutableArray. Search by index, time: %@", @(time));
+            [class testObjectAtIndexWithArrayCapacity:num.intValue completion:^(uint64 time) {
+                NSLog(@"%@. Search by index, time: %@", class, @(time));
                 [objectAtIndexTimes addObject:@(time)];
             }];
             
-            [NSMutableArray testDeletingWithArrayCapacity:num.intValue completion:^(uint64 time) {
-                NSLog(@"NSMutableArray. Random delete, time: %@", @(time));
+            [class testDeletingWithArrayCapacity:num.intValue completion:^(uint64 time) {
+                NSLog(@"%@. Random delete, time: %@", class, @(time));
                 [randomRemoveTimes addObject:@(time)];
             }];
             
-            [NSMutableArray testDeletingLastElmentWithArrayCapacity:num.intValue completion:^(uint64 time) {
-                NSLog(@"NSMutableArray. Remove last, time: %@", @(time));
+            [class testDeletingLastElmentWithArrayCapacity:num.intValue completion:^(uint64 time) {
+                NSLog(@"%@. Remove last, time: %@", class, @(time));
                 [removeAtEndTimes addObject:@(time)];
             }];
-
         }
+        NSLog(@"Insert at beggin :%@", insertAtBeginTimes);
+        NSLog(@"Insert at end :%@", insertAtEndTimes);
+        NSLog(@"Random remove :%@", randomRemoveTimes);
+        NSLog(@"Remove last :%@", removeAtEndTimes);
+        NSLog(@"Index of object :%@", indexOfObjectTimes);
+        NSLog(@"Object at index: %@", objectAtIndexTimes);
+        
     }
-    
+}
+
++ (void)benchmarkNSMutableArray {
+    [[self class] runBenchmarkingForClass:[NSMutableArray class]];
+}
+
++ (void)benchmarkCustomMutableArray {
+    [[self class] runBenchmarkingForClass:[MyMutableArray class]];
 }
 
 @end

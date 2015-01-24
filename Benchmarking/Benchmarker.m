@@ -8,10 +8,7 @@
 
 #import "Benchmarker.h"
 #import "ArrayBenchmarker.h"
-#import "CustomArrayBenchmarker.h"
 #import "DictionaryBenchmarker.h"
-#import "CustomDictionaryBenchmarker.h"
-
 
 const size_t iterations = 100;
 
@@ -23,13 +20,13 @@ const size_t iterations = 100;
             [ArrayBenchmarker benchmarkNSMutableArray];
             break;
         case BenchmarkerTypeCustomMutableArray:
-            [CustomArrayBenchmarker benchmarkCustomMutableArray];
+            [ArrayBenchmarker benchmarkCustomMutableArray];
             break;
         case BenchmarkerTypeNSMutableDictionary:
             [DictionaryBenchmarker benchmarkNSMutableDictionary];
             break;
         case BenchmarkerTypeCustomMutableDictionary:
-            [CustomDictionaryBenchmarker benchmarkCustomMutableDictionary];
+            [DictionaryBenchmarker benchmarkCustomMutableDictionary];
             break;
     }
 }
