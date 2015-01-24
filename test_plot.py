@@ -71,11 +71,52 @@ objectAtIndexCustom = [ 25, 12, 11, 13, 13, 25]
 
 
 plot(capacity, insertAtStartCustom, c = 'red', label = 'insert at start', lw = 2)
+
+title('CustomMutableArray')
+xlabel('elements count')
+ylabel('time, nanoseconds')
+legend()
+grid(True)
+show()
+
 plot(capacity, insertAtEndCustom, c = 'green', label = 'insert at end', lw = 2)
+
+title('CustomMutableArray')
+xlabel('elements count')
+ylabel('time, nanoseconds')
+legend()
+grid(True)
+show()
+
 plot(capacity, randomRemoveCustom, c = 'blue', label = 'random remove', lw = 2)
+
+title('CustomMutableArray')
+xlabel('elements count')
+ylabel('time, nanoseconds')
+legend()
+grid(True)
+show()
+
 plot(capacity, removeLastCustom, c = 'c', label = 'remove last', lw = 2)
+
+title('CustomMutableArray')
+xlabel('elements count')
+ylabel('time, nanoseconds')
+legend()
+grid(True)
+show()
+
 plot(capacity, indexOfObjectCustom, c = 'black', label = 'random access by object', lw = 2)
+
+title('CustomMutableArray')
+xlabel('elements count')
+ylabel('time, nanoseconds')
+legend()
+grid(True)
+show()
+
 plot(capacity, objectAtIndexCustom, c = 'magenta', label = 'random acces by index', lw = 2)
+
 title('CustomMutableArray')
 xlabel('elements count')
 ylabel('time, nanoseconds')

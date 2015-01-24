@@ -26,7 +26,7 @@
     return _count;
 }
 
-- (id)objectAtIndex:(NSUInteger)index { 
+- (id)objectAtIndex:(NSUInteger)index {
     NSAssert(index >= 0, @"Index must be positive or 0");
     NSAssert(index <= _count - 1, @"Index out of bounds");
     return _objs[index];
@@ -70,11 +70,11 @@
     _objs[index] = anObject;
 }
 
-- (void)print {
-    for (int i = 0; i != _count; ++i) {
-        NSLog(@"%@", _objs[i]);
-    }
-    
+- (NSUInteger)indexOfObject:(id)anObject {
+    for (NSUInteger i = 0; i != _count; ++i)
+        if ([anObject isEqual:_objs[i]])
+            return i;
+    return NSNotFound;
 }
 
 
