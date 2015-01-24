@@ -26,9 +26,9 @@
     return _count;
 }
 
-- (id)objectAtIndex:(NSUInteger)index { // here
-//    NSAssert(index >= 0, @"Index must be positive or 0");
-//    NSAssert(index <= _count - 1, @"Index out of bounds");
+- (id)objectAtIndex:(NSUInteger)index { 
+    NSAssert(index >= 0, @"Index must be positive or 0");
+    NSAssert(index <= _count - 1, @"Index out of bounds");
     return _objs[index];
 }
 
@@ -38,7 +38,7 @@
     [self insertObject:anObject atIndex:[self count]];
 }
 
-- (void)insertObject:(id)anObject atIndex:(NSUInteger)index {//here at start and at final
+- (void)insertObject:(id)anObject atIndex:(NSUInteger)index {
     if (_count >= _capacty) {
         NSUInteger newCapacity = MAX(_capacty * 2, 16);
         if (!_objs) {
@@ -46,10 +46,6 @@
         } else {
             _objs = realloc(_objs, newCapacity * sizeof(*_objs));
         }
-//        id *newObjs = malloc(newCapacity * sizeof(*newObjs));
-//        memcpy(newObjs, _objs, _count * sizeof(*_objs));
-//        free(_objs);
-//        _objs = newObjs;
         _capacty = newCapacity;
     }
     memmove(_objs + index + 1, _objs + index, ([self count] - index) * sizeof(*_objs));
@@ -62,7 +58,7 @@
     [self removeObjectAtIndex:[self count] - 1];
 }
 
-- (void)removeObjectAtIndex:(NSUInteger)index { //here
+- (void)removeObjectAtIndex:(NSUInteger)index {
     [_objs[index] release];
     memmove(_objs + index, _objs + index + 1, ([self count] - index - 1) * sizeof(*_objs));
     _count--;
