@@ -23,6 +23,8 @@
         NSMutableArray *removeAtEndTimes = [NSMutableArray array];
         NSMutableArray *indexOfObjectTimes = [NSMutableArray array];
         NSMutableArray *objectAtIndexTimes = [NSMutableArray array];
+        NSMutableArray *removeFirst = [NSMutableArray array];
+        NSMutableArray *allocations = [NSMutableArray array];
        
         for (NSNumber *num in capacity) {
             NSLog(@"CAPACITY : %@", num);
@@ -55,6 +57,14 @@
                 NSLog(@"%@. Remove last, time: %@", class, @(time));
                 [removeAtEndTimes addObject:@(time)];
             }];
+            
+            [class testDeletingFirstElementWithArrayCapacity:num.intValue completion:^(uint64_t time) {
+                [removeFirst addObject:@(time)];
+            }];
+            
+            [class testAllocationWithCapacity:num.intValue completion:^(uint64_t time) {
+                [allocations addObject:@(time)];
+            }];
         }
         NSLog(@"Insert at beggin :%@", insertAtBeginTimes);
         NSLog(@"Insert at end :%@", insertAtEndTimes);
@@ -62,7 +72,8 @@
         NSLog(@"Remove last :%@", removeAtEndTimes);
         NSLog(@"Index of object :%@", indexOfObjectTimes);
         NSLog(@"Object at index: %@", objectAtIndexTimes);
-        
+        NSLog(@"Remove First: %@", removeFirst);
+        NSLog(@"Allocation: %@", allocations);
     }
 }
 

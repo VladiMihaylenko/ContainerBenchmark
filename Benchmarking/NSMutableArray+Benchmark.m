@@ -21,6 +21,23 @@ FOUNDATION_EXTERN const size_t iterations;
     completion(t_0);
 }
 
++ (void)testDeletingFirstElementWithArrayCapacity:(const int)capacity completion:(BenchmarkCompletionHandler)completion {
+    NSMutableArray *array = _mutableArrayWithCapacity(10*capacity);
+    uint64_t t_0 = dispatch_benchmark(iterations/10, ^{
+        [array removeObjectAtIndex:0];
+    });
+    completion(t_0);
+}
+
++ (void)testAllocationWithCapacity:(const int)capacity completion:(BenchmarkCompletionHandler)completion {
+    uint64_t t_0 = dispatch_benchmark(iterations, ^{
+        @autoreleasepool {
+            NSMutableArray *array = _mutableArrayWithCapacity(capacity);
+        }
+    });
+    completion(t_0);
+}
+
 + (void)testDeletingWithArrayCapacity:(const int)capacity completion:(BenchmarkCompletionHandler)completion {
     NSMutableArray *array = _mutableArrayWithCapacity(10*capacity);
     uint64_t t_0 = dispatch_benchmark(iterations/10, ^{
